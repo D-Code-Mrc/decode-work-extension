@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "decode-work Clipper",
+  "description": "Capture web + pastille Notes Yamada sur Google Meet.",
+  "version": "0.2.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "http://127.0.0.1:3100/*",
+    "http://localhost:3100/*",
+    "https://meet.google.com/*"
+  ],
+  "action": {
+    "default_title": "Capturer dans decode-work",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["meet-pill.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

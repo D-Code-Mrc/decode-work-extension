@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>decode-work Clipper</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 12px;
+        width: 320px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin-top: 8px;
+        color: #444;
+      }
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+      }
+      button {
+        margin-top: 12px;
+        width: 100%;
+        padding: 8px;
+        cursor: pointer;
+      }
+      #status {
+        font-size: 12px;
+        margin-top: 8px;
+        min-height: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 16px; margin: 0">Capture decode-work</h1>
+    <p style="font-size: 12px; color: #666">
+      Connectez-vous sur l’app web avant d’envoyer (cookie de session).
+    </p>
+    <label>Base URL <input id="baseUrl" value="http://127.0.0.1:3100" /></label>
+    <label>Titre <input id="title" /></label>
+    <label>URL <input id="url" readonly /></label>
+    <label>Extrait <textarea id="selection" rows="4"></textarea></label>
+    <label>Note <textarea id="note" rows="2"></textarea></label>
+    <button id="send" type="button">Enregistrer dans decode-work</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
